@@ -44,14 +44,32 @@ public class MainActivity extends AppCompatActivity {
                 //transitionContactList();
             }
 
-//            if(ContextCompat.checkSelfPermission(getApplicationContext(),  Manifest.permission.READ_CONTACTS) != PackageManager.PERMISSION_GRANTED) {
-//                Log.v("MainActivity", "API Level = " + Build.VERSION.SDK_INT + ": パーミッションが付与されていない");
-//                // パーミッションが付与されていない場合、
-//                // パーミッションを要求する（ユーザに許可を求めるダイアログを表示する）
-//                ActivityCompat.requestPermissions(MainActivity.this, new String[]{Manifest.permission.READ_CONTACTS}, REQUEST_CODE_READ_CONTACTS);
-//            } else {
+//            // Here, thisActivity is the current activity
+//            if (ContextCompat.checkSelfPermission(MainActivity.this,
+//                    Manifest.permission.READ_CONTACTS)
+//                    != PackageManager.PERMISSION_GRANTED) {
 //
+//                // Permission is not granted
+//                // Should we show an explanation?
+//                if (ActivityCompat.shouldShowRequestPermissionRationale(MainActivity.this,
+//                        Manifest.permission.READ_CONTACTS)) {
+//                    // Show an explanation to the user *asynchronously* -- don't block
+//                    // this thread waiting for the user's response! After the user
+//                    // sees the explanation, try again to request the permission.
+//                } else {
+//                    // No explanation needed; request the permission
+//                    ActivityCompat.requestPermissions(MainActivity.this,
+//                            new String[]{Manifest.permission.READ_CONTACTS},
+//                            REQUEST_CODE);
+//
+//                    // MY_PERMISSIONS_REQUEST_READ_CONTACTS is an
+//                    // app-defined int constant. The callback method gets the
+//                    // result of the request.
+//                }
+//            } else {
+//                // Permission has already been granted
 //            }
+
         }
     }
 }
